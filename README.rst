@@ -6,7 +6,7 @@ Source Code Cleaner
 .. image:: https://img.shields.io/pypi/v/code-cleaner.svg
         :target: https://pypi.python.org/pypi/code-cleaner
 
-.. image:: https://img.shields.io/travis/SasCezar/code-cleaner.svg
+.. image:: https://travis-ci.com/SasCezar/code-cleaner.svg?branch=master
         :target: https://travis-ci.com/SasCezar/code-cleaner
 
 .. image:: https://readthedocs.org/projects/code-cleaner/badge/?version=latest
