@@ -7,7 +7,7 @@ Source Code Cleaner
         :target: https://pypi.python.org/pypi/codecleaner
 
 .. image:: https://img.shields.io/travis/SasCezar/codecleaner.svg
-        :target: https://travis-ci.com/SasCezar/codecleaner
+        :target: https://travis-ci.com/SasCezar/code-cleaner
 
 .. image:: https://readthedocs.org/projects/codecleaner/badge/?version=latest
         :target: https://codecleaner.readthedocs.io/en/latest/?badge=latest
