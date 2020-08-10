@@ -2,20 +2,40 @@
 
 """Tests for `codecleaner` package."""
 
-import pytest
+import unittest
+
+from codecleaner.cleaner import CopyrightCleaner, CommentsCleaner
 
 
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
+class TestStringMethods(unittest.TestCase):
+    def test_clean_documentation(self):
+        cleaner = CopyrightCleaner("")
 
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
+        with open("samples/documentation_1_original.txt", "rt", encoding="utf8") as orig, \
+                open("samples/documentation_1_clean.txt", "rt", encoding="utf8") as cln:
+            original = orig.read()
+
+            cleaned = cleaner.run(original).strip().replace(" ", "")
+
+            clean = cln.read().strip().replace(" ", "")
+
+            self.assertEqual(clean, cleaned)
+
+    def test_clean_comments(self):
+        self.maxDiff = None
+
+        cleaner = CommentsCleaner("")
+
+        with open("samples/comments_1_original.txt", "rt", encoding="utf8") as orig, \
+                open("samples/comments_1_clean.txt", "rt", encoding="utf8") as cln:
+            original = orig.read()
+
+            cleaned = cleaner.run(original).strip().replace(" ", "")
+
+            clean = cln.read().strip().replace(" ", "")
+
+            self.assertEqual(clean, cleaned)
 
 
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+if __name__ == '__main__':
+    unittest.main()

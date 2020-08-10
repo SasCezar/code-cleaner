@@ -12,9 +12,9 @@ with open('HISTORY.rst') as history_file:
 
 requirements = []
 
-setup_requirements = ['pytest-runner', ]
+setup_requirements = []
 
-test_requirements = ['pytest>=3', ]
+test_requirements = []
 
 setup(
     author="Cezar Sas",
@@ -31,7 +31,8 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="A library for text preprocessing of source code. The library offers a siple interface, and supports multiple programming languages",
+    description="A library for text preprocessing of source code. The library offers a simple interface, and supports "
+                "multiple programming languages",
     install_requires=requirements,
     license="GNU General Public License v3",
     long_description=readme + '\n\n' + history,
@@ -43,6 +44,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/SasCezar/code-cleaner',
-    version='0.1.3',
+    version='0.1.9',
     zip_safe=False,
 )
